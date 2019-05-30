@@ -1,14 +1,17 @@
 language: java
-jdk:
-    - openjdk11
+sudo: false
+install: true
+
 addons:
   sonarcloud:
     organization: "devmeex-github" # the key of the org you chose at step #3
     token:
-      secure: 42c82f85a130f2abf1b803287c29e8e5924960bb # encrypted value of your token
+      secure: "42c82f85a130f2abf1b803287c29e8e5924960bb" # encrypted value of your token
+jdk:
+    - openjdk11
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-runner    
+  - sonar-scanner    
     
 deploy:
   provider: heroku
