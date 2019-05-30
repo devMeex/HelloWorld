@@ -1,3 +1,7 @@
 language: java
 jdk:
     - openjdk11
+deploy:
+  provider: heroku
+  api_key: 1eea512a-0902-4ffc-9f82-87083eab5807
+  app: ci-hellomundo
