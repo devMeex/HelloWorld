@@ -1,6 +1,6 @@
 language: java
-jdk:
-    - oraclejdk8
+sudo: false
+install: true
 
 addons:
   sonarcloud:
@@ -8,9 +8,12 @@ addons:
     token:
       secure: "42c82f85a130f2abf1b803287c29e8e5924960bb" # encrypted value of your token
 
+jdk:
+    - openjdk11
+
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner    
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar 
     
 deploy:
   provider: heroku
