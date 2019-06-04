@@ -13,11 +13,8 @@ jdk:
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-      - mvn clean verify sonar:sonar -Pcoverage 
-cache:
-  directories:
-    - '$HOME/.m2/repository'
-    - '$HOME/.sonar/cache'    
+     - sonar-scanner
+    
 deploy:
   provider: heroku
   api_key: 1eea512a-0902-4ffc-9f82-87083eab5807
