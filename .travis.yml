@@ -9,15 +9,11 @@ addons:
       secure: 42c82f85a130f2abf1b803287c29e8e5924960bb # encrypted value of your token
 
 jdk:
-    - openjdk11
+    - oraclejdk8
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  -mvn sonar:sonar \
-  -Dsonar.projectKey=devMeex_HelloWorld \
-  -Dsonar.organization=devmeex-github \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=42c82f85a130f2abf1b803287c29e8e5924960bb
+  - mvn clean verify sonar:sonar -Dsonar.login=42c82f85a130f2abf1b803287c29e8e5924960bb
     
 deploy:
   provider: heroku
