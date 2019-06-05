@@ -6,7 +6,7 @@ addons:
   sonarcloud:
     organization: "devmeex-github" # the key of the org you chose at step #3
     token:
-      secure: 42c82f85a130f2abf1b803287c29e8e5924960bb # encrypted value of your token
+      secure: "$SONAR_TOKEN" # encrypted value of your token
 
 jdk:
     - oraclejdk8
