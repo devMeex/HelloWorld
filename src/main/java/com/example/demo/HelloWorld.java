@@ -9,6 +9,6 @@ public class HelloWorld {
     @RequestMapping("/")
     public String index()
     {
-        return  "Hello World!!! Hello Heroku!!";
+        return  "Hello World!!! Hello Heroku!! Hello Sonnar!";
     }
 }
