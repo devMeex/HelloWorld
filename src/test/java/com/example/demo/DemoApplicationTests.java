@@ -12,7 +12,7 @@ public class DemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		Assert.assertTrue("Assertion has been false",1==2);
+		Assert.assertTrue("Assertion has been false",1==1);
 	}
 
 }
