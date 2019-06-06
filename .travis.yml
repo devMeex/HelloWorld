@@ -19,3 +19,6 @@ deploy:
   provider: heroku
   api_key: 1eea512a-0902-4ffc-9f82-87083eab5807
   app: ci-hellomundo
+  
+notifications:
+  slack: is-utn-2019:qZhPpOMlB92vDm5e2vqxqsmx#taller_ci
