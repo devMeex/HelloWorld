@@ -1,14 +1,15 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class HelloWorld {
 
     @RequestMapping("/")
     public String index()
     {
-        return  "Hello World!!! Hello Heroku!! Hello Sonnar!";
+        return  "index";
     }
 }
